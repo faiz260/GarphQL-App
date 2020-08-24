@@ -45,5 +45,5 @@ const typeDefs = gql`
 const server = new ApolloServer({typeDefs, resolvers});
 
 server.listen().then(({url})=>{
-    console.log(`Server running on port ${url}`);
+    console.log(`Server running on port ${url} 🚀`);
 })
