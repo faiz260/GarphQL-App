@@ -26,6 +26,12 @@ const resolvers = {
     Query: {
       students: () => students,
     },
+    Mutation: {
+      addStudent: (_, {input})=>{
+        console.log(input)
+        return input
+      }
+    }
   };
 
 const typeDefs = gql`
@@ -36,9 +42,18 @@ const typeDefs = gql`
     email: String
     age: Int
   }
+  input StdInput {
+    id: Int  
+    name: String
+    email: String
+    age: Int
+  }
 
   type Query {
     students: [Student]
+  }
+  type Mutation {
+    addStudent(input: StdInput): Student
   }
 `;
 
