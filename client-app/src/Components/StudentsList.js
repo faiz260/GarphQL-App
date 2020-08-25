@@ -20,12 +20,11 @@ export const StudentsList = () => {
   if (error) {
     return <h1>Error !!</h1>;
   }
-//   console.log(data);
   const { students } = data;
   console.log(students);
   return (
     <div>
-      <table border="2">
+      <table  border="2" width="500px" height="200px">
         <tbody>
             <tr>
                 <th>Name</th>
